@@ -12,7 +12,7 @@ To run this project you will need the following:
 
 * Node 8
 * Npm 6
-* Lastest Chrome/Firefox
+* Latest Chrome/Firefox
 
 ## Installation
 
@@ -29,4 +29,5 @@ npm run-script start
 ```
 
 3.  Open browser
-    Point your browser to http://localhost:3000
+
+Point your browser to http://localhost:3000

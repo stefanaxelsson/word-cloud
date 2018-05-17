@@ -13,10 +13,12 @@ const getWords = async url => {
        * Remove non-word characters.
        * This could be improved further using v8s new unicode support and
        * using a dom parser to remove html. Handling of special characters
-       * like ' and also - needs to a cleaner approach.
+       * like ' and also - needs to a cleaner approach. There is no normalizing, i.e.
+       * Bird and bird will be detected as two separate words.
        */
       let content = item.content.replace(/[^a-zåäö'-]/gim, " ");
-      content = content.replace(/[\s]+/, " ");
+      content = content.replace(/[\s]+/gm, " ");
+      content = content.trim();
 
       let itemWords = content.split(" ");
       if (item.language) {
