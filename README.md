@@ -1,4 +1,4 @@
-# Tag Cloud by Stefan Axelsson
+# Word Cloud by Stefan Axelsson
 
 This web application lists the most commonly used words from a RSS Feed. It does this by:
 

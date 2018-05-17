@@ -1,4 +1,4 @@
-jest.mock("../readFeed", () => url => {
+jest.mock("../readFeed", () => () => {
   return Promise.resolve([
     {
       content: "Fågeln flyger över vägen. Och fågeln flyger vidare.",
