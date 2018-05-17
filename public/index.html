@@ -1,0 +1,46 @@
+<!<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Word Cloud by Stefan Axelsson</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/main.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <header id="header" class="header">
+            <h1 class="header__text">Word Cloud by Stefan Axelsson</h1>
+        </header>
+        <form id="input-form" class="input-form">
+            <label for="url" class="input-form__label">RSS Feed:</label>
+            <input type="url" name="url" class="input-form__url" id="url" pattern="https?://.+" placeholder="https://example.com/rss"
+                required>
+            <input type="submit" class="input-form__button" id="listWordsButton" name="listTagsButton" value="List words">
+        </form>
+        <main id="result" class="result result--no-action">
+            <div class="result__words">
+            </div>
+            <div class="result__error">
+            </div>
+            <div class="result__no-action">
+                <p class="result__no-action__description">
+                    Enter a url to a rss feed above and click "List words". The most commonly used words will be listed here.
+                </p>
+            </div>
+        </main>
+        <footer id="footer" class="footer">
+            <address class="footer__address">
+                Contact me at:
+                <a id="email" class="footer__address__email"></a>
+            </address>
+        </footer>
+    </div>
+
+
+    <script src="assets/main.js"></script>
+</body>
+
+</html>

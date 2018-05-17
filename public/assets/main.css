@@ -1,0 +1,134 @@
+:root {
+  --main-padding: 20px;
+  --primary-color: #00bcd4;
+  --secondary-color: #00838f;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-columns: 100%;
+}
+
+.header {
+  background: var(--primary-color);
+  padding: var(--main-padding);
+}
+
+.header__text {
+  font-weight: normal;
+  margin: 0;
+}
+
+.input-form {
+  background: #eee;
+  margin: 0;
+  padding: var(--main-padding);
+  display: flex;
+  align-items: center;
+}
+
+.input-form__label {
+  display: block;
+  margin-right: 8px;
+}
+
+.input-form__url {
+  flex: 1;
+  max-width: 300px;
+  height: 30px;
+  padding: 0 8px;
+  background: #fff;
+  border: 0;
+  border-bottom: 2px #ccc solid;
+  margin-right: 8px;
+}
+
+.input-form__url:focus {
+  border-bottom: 2px var(--secondary-color) solid;
+  outline: 0;
+}
+
+.input-form__button {
+  outline: 0;
+  height: 30px;
+  padding: 0 8px;
+  color: #fff;
+  background: var(--secondary-color);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+}
+
+.input-form__button:disabled {
+  background: #ccc;
+  color: #999;
+}
+
+.result {
+  padding: var(--main-padding);
+}
+
+.result__words {
+  display: none;
+}
+
+.result__error {
+  display: none;
+}
+
+.result__no-action {
+  display: none;
+  max-width: 450px;
+  position: relative;
+}
+
+.result--no-action .result__no-action,
+.result--error .result__error,
+.result--words .result__words {
+  display: block;
+}
+
+.result__error {
+  color: #ff0000;
+}
+
+.result__no-action__description:before {
+  float: right;
+  width: 80px;
+  height: 80px;
+  background-image: url("arrow.svg");
+  display: block;
+  content: "";
+}
+
+.footer {
+  background: #212121;
+  padding: var(--main-padding);
+}
+
+.footer__address {
+  color: #ccc;
+}
+
+.footer__address,
+.footer__address__email {
+  font-style: normal;
+}
+
+.footer__address__email {
+  color: #fff;
+  text-decoration: none;
+}
