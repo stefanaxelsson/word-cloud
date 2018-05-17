@@ -16,6 +16,9 @@ To run this project you will need the following:
 
 ## Installation
 
+Either clone or download this repository.
+Open the directory in your terminal and run the following commands:
+
 1.  Install dependencies
 
 ```
